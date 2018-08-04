@@ -226,20 +226,20 @@ def get_paging(size, cur_page, max_page, href):
 class EventHandler(ProcessEvent):
     def process_IN_CREATE(self, event):
         file = os.path.join(event.path, event.name)
-        print("Create file:%s." % file)
         if file.endswith('.md'):
+            print("Create file:%s." % file)
             add_one_file(file)
 
     def process_IN_DELETE(self, event):
         file = os.path.join(event.path, event.name)
-        print("Delete file:%s." % file)
         if file.endswith('.md'):
+            print("Delete file:%s." % file)
             remove_one_file(file)
 
     def process_IN_MODIFY(self, event):
         file = os.path.join(event.path, event.name)
-        print("Modify file:%s." % file)
         if file.endswith('.md'):
+            print("Modify file:%s." % file)
             modify_one_file(file)
 
 
