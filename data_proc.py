@@ -44,42 +44,52 @@ def trim_md(md_file):
     log = False
     check_dict = dict()
     content = list()
-    for row in text:
-        row_content = row.strip(' ').strip('﻿').strip('\n')
-        if start:
-            kv = row.split('=')
-            if len(kv) == 2:
-                check_dict[kv[0].strip(' ')] = json.loads(kv[1].strip(' ').strip('\n'))
-        if log:
-            if len(row_content) > 0:
-                content.append(row_content)
-        if not start and row_content == "+++":
-            start = True
-        elif start and row_content == "+++":
-            start = False
-            log = True
-    if len(check_dict) > 0 and check_head(check_dict):
-        content = '\n'.join(content)
-        content = markdown.markdown(content, output_format='html5', extensions=extensions)
-    else:
-        content = ''
-
+    try:
+        for row in text:
+            row_content = row.strip(' ').strip('﻿').strip('\n')
+            if start:
+                kv = row.split('=')
+                if len(kv) == 2:
+                    check_dict[kv[0].strip(' ')] = json.loads(kv[1].strip(' ').strip('\n'))
+            if log:
+                if len(row_content) > 0:
+                    content.append(row_content)
+            if not start and row_content == "+++":
+                start = True
+            elif start and row_content == "+++":
+                start = False
+                log = True
+        if len(check_dict) > 0 and check_head(check_dict):
+            content = '\n'.join(content)
+            content = markdown.markdown(content, output_format='html5', extensions=extensions)
+        else:
+            content = ''
+    except Exception as e:
+        print(str(e))
     return check_dict, content
 
 
 def remove_cate_tag(article_id):
     for cate_key in articles[article_id]['cate']:
         for sub_key in articles[article_id]['cate'][cate_key]:
-            for loc in range(0,len(category_index[cate_key][sub_key])):
+            for loc in range(0, len(category_index[cate_key][sub_key])):
                 if category_index[cate_key][sub_key][loc]['article_id'] == article_id:
                     break
             del category_index[cate_key][sub_key][loc]
+            if len(category_index[cate_key][sub_key]) == 0:
+                del category_index[cate_key][sub_key]
+        if len(category_index[cate_key]) == 0:
+            del category_index[cate_key]
     for tag_key in articles[article_id]['tag']:
         for sub_key in articles[article_id]['tag'][tag_key]:
-            for loc in range(0,len(tags_index[tag_key][sub_key])):
+            for loc in range(0, len(tags_index[tag_key][sub_key])):
                 if tags_index[tag_key][sub_key][loc]['article_id'] == article_id:
                     break
             del tags_index[tag_key][sub_key][loc]
+            if len(tags_index[tag_key][sub_key]) == 0:
+                del tags_index[tag_key][sub_key]
+        if len(tags_index[tag_key]) == 0:
+            del tags_index[tag_key]
 
 
 def remove_one_file(file):
