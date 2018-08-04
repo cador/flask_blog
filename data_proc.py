@@ -4,6 +4,7 @@ import json
 import os
 import glob
 import math
+import threading
 
 
 articles = dict()
@@ -261,4 +262,5 @@ def fs_monitor(path='.'):
 
 
 init_db()
-fs_monitor("post")
+task = threading.Thread(target=fs_monitor, args=("post",))
+task.start()
