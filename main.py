@@ -94,7 +94,8 @@ def tags_list():
 @app.route("/image/<image_id>")
 def index(image_id):
     image = flask.file("images/{}.svg".format(image_id))
-    resp = flask.Response(image, mimetype="image/svg")
+    print("images/{}.svg".format(image_id))
+    resp = flask.Response(image, mimetype="image/svg+xml")
     return resp
 
 
