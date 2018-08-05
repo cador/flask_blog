@@ -138,16 +138,21 @@ def add_cate_tag(out_dict, article_id):
 
 
 def add_one_file(file):
+    print("add_one_file")
     out_dict, html = trim_md(file)
     if len(out_dict) > 0:
+        print("entering...")
         article_id = file.split('/')[-1].strip('.md')
+        print(str(article_id in articles))
         articles[article_id] = {'title': out_dict['title'],
                                 'date': out_dict['date'],
                                 'html': html,
                                 'cate': out_dict['categories'],
                                 'tag': out_dict['tags']}
         meta_dict = {'title': out_dict['title'], 'date': out_dict['date'], 'article_id': article_id}
+        print(str(len(home_index)))
         home_index.append(meta_dict)
+        print(str(len(home_index)))
         add_cate_tag(out_dict, article_id)
 
 
