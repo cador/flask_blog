@@ -71,25 +71,36 @@ def trim_md(md_file):
 
 def remove_cate_tag(article_id):
     for cate_key in articles[article_id]['cate']:
-        for sub_key in articles[article_id]['cate'][cate_key]:
-            for loc in range(0, len(category_index[cate_key][sub_key])):
-                if category_index[cate_key][sub_key][loc]['article_id'] == article_id:
-                    break
-            del category_index[cate_key][sub_key][loc]
-            if len(category_index[cate_key][sub_key]) == 0:
-                del category_index[cate_key][sub_key]
-        if len(category_index[cate_key]) == 0:
-            del category_index[cate_key]
+        # 判断category_index中是否存在
+        if cate_key in category_index:
+            for sub_key in articles[article_id]['cate'][cate_key]:
+                if sub_key in category_index[cate_key]:
+                    cur_loc = -1
+                    for loc in range(0, len(category_index[cate_key][sub_key])):
+                        if category_index[cate_key][sub_key][loc]['article_id'] == article_id:
+                            cur_loc = loc
+                            break
+                    if cur_loc > -1:
+                        del category_index[cate_key][sub_key][loc]
+                        if len(category_index[cate_key][sub_key]) == 0:
+                            del category_index[cate_key][sub_key]
+            if len(category_index[cate_key]) == 0:
+                del category_index[cate_key]
     for tag_key in articles[article_id]['tag']:
-        for sub_key in articles[article_id]['tag'][tag_key]:
-            for loc in range(0, len(tags_index[tag_key][sub_key])):
-                if tags_index[tag_key][sub_key][loc]['article_id'] == article_id:
-                    break
-            del tags_index[tag_key][sub_key][loc]
-            if len(tags_index[tag_key][sub_key]) == 0:
-                del tags_index[tag_key][sub_key]
-        if len(tags_index[tag_key]) == 0:
-            del tags_index[tag_key]
+        if tag_key in tags_index:
+            for sub_key in articles[article_id]['tag'][tag_key]:
+                if sub_key in tags_index[tag_key]:
+                    cur_loc = -1
+                    for loc in range(0, len(tags_index[tag_key][sub_key])):
+                        if tags_index[tag_key][sub_key][loc]['article_id'] == article_id:
+                            cur_loc = loc
+                            break
+                    if cur_loc > -1:
+                        del tags_index[tag_key][sub_key][loc]
+                        if len(tags_index[tag_key][sub_key]) == 0:
+                            del tags_index[tag_key][sub_key]
+            if len(tags_index[tag_key]) == 0:
+                del tags_index[tag_key]
 
 
 def remove_one_file(file):
