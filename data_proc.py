@@ -106,13 +106,14 @@ def modify_one_file(file):
     out_dict, html = trim_md(file)
     if len(out_dict) > 0:
         article_id = file.split('/')[-1].strip('.md')
+        has_exist = article_id in articles
         articles[article_id] = {'title': out_dict['title'],
                                 'date': out_dict['date'],
                                 'html': html,
                                 'cate': out_dict['categories'],
                                 'tag': out_dict['tags']}
         meta_dict = {'title': out_dict['title'], 'date': out_dict['date'], 'article_id': article_id}
-        if article_id in articles:
+        if has_exist:
             for loc in range(0, len(home_index)):
                 if home_index[loc]['article_id'] == article_id:
                     home_index[loc] = meta_dict
