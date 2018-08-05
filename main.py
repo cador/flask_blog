@@ -74,7 +74,7 @@ def categories_list(cate_key, sub_cate):
     for item in db_tool.category_index[cate_key][sub_cate]:
         content.append(db_tool.get_item_html(item['article_id'], item['title'], item['date']))
     return paging_html(content, "分类："+cate_key+" > "+sub_cate,
-                       '/categories_list?cate='+cate_key+"&sub_cate="+sub_cate)
+                       '/categories_list/'+cate_key+"/"+sub_cate)
 
 
 @app.route('/tags_list/<tag_key>/<sub_tag>')
@@ -83,7 +83,7 @@ def tags_list(tag_key, sub_tag):
     for item in db_tool.tags_index[tag_key][sub_tag]:
         content.append(db_tool.get_item_html(item['article_id'], item['title'], item['date']))
     return paging_html(content, "标签："+tag_key + " > " + sub_tag,
-                       '/tags_list?tag='+tag_key+'&sub_tag='+sub_tag)
+                       '/tags_list/'+tag_key+'/'+sub_tag)
 
 
 @app.route("/images/<image_id>")
