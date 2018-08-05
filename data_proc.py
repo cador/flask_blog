@@ -112,10 +112,13 @@ def modify_one_file(file):
                                 'cate': out_dict['categories'],
                                 'tag': out_dict['tags']}
         meta_dict = {'title': out_dict['title'], 'date': out_dict['date'], 'article_id': article_id}
-        for loc in range(0, len(home_index)):
-            if home_index[loc]['article_id'] == article_id:
-                home_index[loc] = meta_dict
-        remove_cate_tag(article_id)
+        if article_id in articles:
+            for loc in range(0, len(home_index)):
+                if home_index[loc]['article_id'] == article_id:
+                    home_index[loc] = meta_dict
+            remove_cate_tag(article_id)
+        else:
+            home_index.append(meta_dict)
         add_cate_tag(out_dict, article_id)
 
 
@@ -239,11 +242,11 @@ def get_paging(size, cur_page, max_page, href):
 
 
 class EventHandler(ProcessEvent):
-    def process_IN_CREATE(self, event):
-        file = os.path.join(event.path, event.name)
-        if file.endswith('.md'):
-            print("Create file:%s." % file)
-            add_one_file(file)
+    # def process_IN_CREATE(self, event):
+    #     file = os.path.join(event.path, event.name)
+    #     if file.endswith('.md'):
+    #         print("Create file:%s." % file)
+    #         add_one_file(file)
 
     def process_IN_DELETE(self, event):
         file = os.path.join(event.path, event.name)
@@ -255,7 +258,7 @@ class EventHandler(ProcessEvent):
         file = os.path.join(event.path, event.name)
         if file.endswith('.md'):
             print("Modify file:%s." % file)
-            # modify_one_file(file)
+            modify_one_file(file)
 
 
 def fs_monitor(path='.'):
