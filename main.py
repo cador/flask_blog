@@ -79,10 +79,8 @@ def categories_list():
                        '/categories_list?cate='+cate_key+"&sub_cate="+sub_cate)
 
 
-@app.route('/tags_list')
-def tags_list():
-    tag_key = flask.request.args.get('tag')
-    sub_tag = flask.request.args.get('sub_tag')
+@app.route('/tags_list/<tag_key>/<sub_tag>')
+def tags_list(tag_key, sub_tag):
     content = list()
     for item in db_tool.tags_index[tag_key][sub_tag]:
         content.append(db_tool.get_item_html(item['article_id'], item['title'], item['date']))
