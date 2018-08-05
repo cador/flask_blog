@@ -250,7 +250,7 @@ class EventHandler(ProcessEvent):
         file = os.path.join(event.path, event.name)
         if file.endswith('.md'):
             print("Modify file:%s." % file)
-            modify_one_file(file)
+            # modify_one_file(file)
 
 
 def fs_monitor(path='.'):
