@@ -197,7 +197,7 @@ def get_tags_html(tags_key):
 def get_category_html(cate_key):
     out = '<h2 class="category-title">'+cate_key+'</h2>'
     for sub_key in category_index[cate_key]:
-        sub_out = '<ul class="category-item"><li><a href="/categories_list?cate='+cate_key+'&sub_cate='+sub_key+'">'+sub_key+'</a>' + \
+        sub_out = '<ul class="category-item"><li><a href="/categories_list/'+cate_key+'/'+sub_key+'">'+sub_key+'</a>' +\
                   '<span class="category-item-count"><sup>('+str(len(category_index[cate_key][sub_key])) + \
                   ')</sup></span></li></ul>'
         out = out + sub_out

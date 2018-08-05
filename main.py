@@ -68,10 +68,8 @@ def categories():
     return flask.render_template("categories.html", cate=flask.Markup(''.join(out)))
 
 
-@app.route('/categories_list')
-def categories_list():
-    cate_key = flask.request.args.get('cate')
-    sub_cate = flask.request.args.get('sub_cate')
+@app.route('/categories_list/<cate_key>/<sub_cate>')
+def categories_list(cate_key, sub_cate):
     content = list()
     for item in db_tool.category_index[cate_key][sub_cate]:
         content.append(db_tool.get_item_html(item['article_id'], item['title'], item['date']))
