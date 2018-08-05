@@ -71,12 +71,12 @@ def trim_md(md_file):
 
 def remove_cate_tag(article_id):
     for cate_key in articles[article_id]['cate']:
-        print(cate_key)
+        print(cate_key.encode('utf-8'))
         # 判断category_index中是否存在
         if cate_key in category_index:
             print("exist1")
             for sub_key in articles[article_id]['cate'][cate_key]:
-                print(sub_key)
+                print(sub_key.encode('utf-8'))
                 if sub_key in category_index[cate_key]:
                     print("exist2")
                     cur_loc = -1
