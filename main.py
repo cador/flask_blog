@@ -1,7 +1,9 @@
 import flask
 import data_proc as db_tool
 import math
+from datetime import timedelta
 app = flask.Flask(__name__)
+app.config["SEND_FILE_MAX_AGE_DEFAULT"] = timedelta(seconds=1)
 
 
 @app.route("/article/<article_id>")
