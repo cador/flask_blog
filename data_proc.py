@@ -119,7 +119,7 @@ def modify_one_file(file):
                     home_index[loc] = meta_dict
             remove_cate_tag(article_id)
         else:
-            home_index.append(meta_dict)
+            home_index.insert(0, meta_dict)
         add_cate_tag(out_dict, article_id)
 
 
