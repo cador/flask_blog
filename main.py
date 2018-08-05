@@ -91,5 +91,12 @@ def tags_list():
                        '/tags_list?tag='+tag_key+'&sub_tag='+sub_tag)
 
 
+@app.route("/image/<image_id>")
+def index(image_id):
+    image = flask.file("images/{}.svg".format(image_id))
+    resp = flask.Response(image, mimetype="image/svg")
+    return resp
+
+
 if __name__ == "__main__":
     app.run('0.0.0.0', 80)
