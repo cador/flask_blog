@@ -4,9 +4,8 @@ import math
 app = flask.Flask(__name__)
 
 
-@app.route("/article")
-def article():
-    article_id = flask.request.args.get('id')
+@app.route("/article/<article_id>")
+def article(article_id):
     if article_id in db_tool.articles:
         entity = db_tool.articles[article_id]
         return flask.render_template("article.html", title=entity['title'],
