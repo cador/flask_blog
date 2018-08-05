@@ -184,9 +184,9 @@ def get_item_html(article_id, title, date):
 
 
 def get_tags_html(tags_key):
-    out = '<h2 class="tag-cloud-title">'+tags_key+'</h2>'
+    out = '<h2 class="category-title">'+tags_key+'</h2>'
     for sub_key in tags_index[tags_key]:
-        sub_out = '<ul class="tag-cloud-item"><li>' + \
+        sub_out = '<ul class="category-item"><li>' + \
                   '<a href="/tags_list/'+tags_key+'/'+sub_key+'" style="font-size:1.5rem">'+sub_key+'</a>' + \
                   '<span class="category-item-count"><sup>('+str(len(tags_index[tags_key][sub_key]))+')</sup></span>' +\
                   '</li></ul>'
@@ -210,12 +210,12 @@ def get_detail_tags_html():
     for cate_key in category_index:
         out = out + '<li><i class="fa fa-category">'+cate_key+' > </i>'
         for sub_key in category_index[cate_key]:
-            out = out + '<a href="/categories_list?cate='+cate_key+'&sub_cate='+sub_key+'">'+sub_key+'</a>'
+            out = out + '<a href="/categories_list/'+cate_key+'/'+sub_key+'">'+sub_key+'</a>'
         out = out + '</li>'
     for tag_key in tags_index:
         out = out + '<li><i class="fa fa-tags">'+tag_key+' > </i>'
         for sub_key in tags_index[tag_key]:
-            out = out + '<a href="/tags_list?tag='+tag_key+'&sub_tag='+sub_key+'">'+sub_key+'</a>'
+            out = out + '<a href="/tags_list/'+tag_key+'/'+sub_key+'">'+sub_key+'</a>'
         out = out + '</li>'
     return out
 
