@@ -44,7 +44,7 @@ def hello():
     content = list()
     for item in db_tool.home_index:
         content.append(db_tool.get_item_html(item['article_id'], item['title'], item['date']))
-    return paging_html(content, '最近更新', '/?a=1')
+    return paging_html(content, '最近更新', '')
 
 
 @app.route("/about")

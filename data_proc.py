@@ -221,7 +221,7 @@ def get_detail_tags_html():
 
 def get_paging(size, cur_page, max_page, href):
     if cur_page > 1:
-        out = '<div class="page"><a href="'+href+'&paging='+str(cur_page - 1)+'">上一页</a>&nbsp;'
+        out = '<div class="page"><a href="'+href+'?paging='+str(cur_page - 1)+'">上一页</a>&nbsp;'
     else:
         out = '<div class="page"><a>上一页</a>&nbsp;'
     if cur_page > max_page:
@@ -240,9 +240,9 @@ def get_paging(size, cur_page, max_page, href):
             style = 'style="background-color:#ccc;color:white"'
         else:
             style = ''
-        out = out + '<a ' + style + ' href="'+href+'&paging=' + str(i) + '">' + str(i) + '</a>&nbsp;'
+        out = out + '<a ' + style + ' href="'+href+'?paging=' + str(i) + '">' + str(i) + '</a>&nbsp;'
     if cur_page < size:
-        out = out + '<a href="'+href+'&paging='+str(cur_page + 1)+'">下一页</a></div>'
+        out = out + '<a href="'+href+'?paging='+str(cur_page + 1)+'">下一页</a></div>'
     else:
         out = out + '<a>下一页</a></div>'
     return out
