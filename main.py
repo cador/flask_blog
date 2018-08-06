@@ -11,7 +11,8 @@ app.config["SEND_FILE_MAX_AGE_DEFAULT"] = timedelta(seconds=1)
 def data(data_name):
     file_name = "data/"+data_name+".csv"
     if os.path.exists(file_name):
-        return flask.Markup(db_tool.markdown_trans(db_tool.to_table(file_name, ",")))
+        style = '<style type="text/css"> table {table table-bordered table-striped table-condensed} </style>\n'
+        return flask.Markup(db_tool.markdown_trans(style+db_tool.to_table(file_name, ",")))
     else:
         return flask.render_template('404.html')
 
