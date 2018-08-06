@@ -1,9 +1,19 @@
 import flask
 import data_proc as db_tool
 import math
+import os
 from datetime import timedelta
 app = flask.Flask(__name__)
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = timedelta(seconds=1)
+
+
+@app.route("/data/<data_name>")
+def data(data_name):
+    file_name = "data/"+data_name+".csv"
+    if os.path.exists(file_name):
+        flask.Markup(db_tool.to_table(file_name, ","))
+    else:
+        return flask.render_template('404.html')
 
 
 @app.route("/article/<article_id>")

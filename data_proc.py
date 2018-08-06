@@ -287,6 +287,25 @@ def fs_monitor(path='.'):
             break
 
 
+def to_table(filename, sep):
+    file_obj_r = open(filename, 'r')
+    out = list()
+    count = 0
+    for line in file_obj_r:
+        rec = line.split(sep)
+        new_rec = [i.strip() for i in rec]
+        new_rec = '|' + '|'.join(new_rec) + '|' + '\n'
+        out.append(new_rec)
+        if count == 0:
+            head_rec = '|'
+            head_rec = head_rec + '---|'*len(rec)
+            head_rec += '\n'
+            out.append(head_rec)
+            count += 1
+    file_obj_r.close()
+    return ''.join(out)
+
+
 init_db()
 task = threading.Thread(target=fs_monitor, args=("post",))
 task.start()
