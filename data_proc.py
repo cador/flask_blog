@@ -37,6 +37,10 @@ def check_head(v_dict):
     return True
 
 
+def markdown_trans(content):
+    return markdown.markdown(content, output_format='html5', extensions=extensions)
+
+
 def trim_md(md_file):
     input_file = open(md_file, mode="r", encoding="utf-8")
     text = input_file.readlines()
@@ -61,7 +65,7 @@ def trim_md(md_file):
                 log = True
         if len(check_dict) > 0 and check_head(check_dict):
             content = '\n'.join(content)
-            content = markdown.markdown(content, output_format='html5', extensions=extensions)
+            content = markdown_trans(content)
         else:
             content = ''
     except Exception as e:
