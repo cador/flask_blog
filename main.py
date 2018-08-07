@@ -17,6 +17,11 @@ def data(data_name):
         return flask.render_template('404.html')
 
 
+@app.route("/download/<filename>", methods=['GET'])
+def download_file(filename):
+    return flask.send_from_directory("data", filename+".csv", as_attachment=True)
+
+
 @app.route("/article/<article_id>")
 def article(article_id):
     if article_id in db_tool.articles:
