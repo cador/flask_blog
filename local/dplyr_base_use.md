@@ -12,7 +12,6 @@ dplyr是一套数据操作的语法，它提供了一致的动作集合可以帮
 主要包括：
 
 <span id='home'></span>
-
 -  [tbl对象](#tibble_obj)
 -  [数据操作](#sjcz)
     - [变量筛选](#sjcz_blsx)
