@@ -11,18 +11,23 @@ articles = dict()
 home_index = list()
 category_index = dict()
 tags_index = dict()
-extensions = ['markdown.extensions.toc',
-              'markdown.extensions.sane_lists',
-              'markdown.extensions.codehilite',
+extensions = ['markdown.extensions.extra',
               'markdown.extensions.abbr',
               'markdown.extensions.attr_list',
               'markdown.extensions.def_list',
               'markdown.extensions.fenced_code',
               'markdown.extensions.footnotes',
+              'markdown.extensions.tables',
               'markdown.extensions.smart_strong',
+              'markdown.extensions.admonition',
+              'markdown.extensions.codehilite',
+              'markdown.extensions.headerid',
               'markdown.extensions.meta',
               'markdown.extensions.nl2br',
-              'markdown.extensions.tables']
+              'markdown.extensions.sane_lists',
+              'markdown.extensions.smarty',
+              'markdown.extensions.toc',
+              'markdown.extensions.wikilinks']
 
 
 def check_head(v_dict):
