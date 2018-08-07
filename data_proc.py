@@ -305,7 +305,7 @@ def to_table(filename, sep):
             head_rec = head_rec + '---|'*len(rec)
             head_rec += '\n'
             out.append(head_rec)
-            count += 1
+        count += 1
         if count >= 100:
             break
     file_obj_r.close()
