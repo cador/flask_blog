@@ -6,7 +6,7 @@ tags = {"标签":["数据"]}
 +++
 
 [预览链接](/data/LosAngelesNeighbor)
-[下载数据](/data/LosAngelesNeighbor)
+[下载数据](/download/LosAngelesNeighbor)
 
 ## 描述
 该数据来源于2000年美国的人口普查，对洛杉机的110个街区，统计了教育、收入和人口信息
@@ -43,6 +43,3 @@ tags = {"标签":["数据"]}
  >经度
  - Latitude  
  >纬度
-
-#
-
