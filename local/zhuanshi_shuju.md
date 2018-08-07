@@ -1,6 +1,6 @@
 +++
 date = "2018-08-07"
-title = "钻石数据"
+title = "钻石数据(diamonds)"
 categories = { "数据":["常用数据集"] }
 tags = {"标签":["数据"]}
 +++
