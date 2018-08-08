@@ -7,13 +7,13 @@ tags = {"标签":["R语言","lattice"]}
 
 <span id='home'></span>
 
--  [函数原型](#hsyx)
--  [参数说明](#cssm)
--  [绘图案例](#htal)
-  - [分析iris数据](#fxirissj)
-  - [分析mtcars数据](#fxmtcarssj)
-  - [分析states数据](#fxstatessj)
-  - [分析gapminder数据](#fxgapmindersj)
+&bull;&nbsp;[函数原型](#hsyx)
+&bull;&nbsp;[参数说明](#cssm)
+&bull;&nbsp;[绘图案例](#htal)
+&emsp;&emsp;&deg;&nbsp;[分析iris数据](#fxirissj)
+&emsp;&emsp;&deg;&nbsp;[分析mtcars数据](#fxmtcarssj)
+&emsp;&emsp;&deg;&nbsp;[分析states数据](#fxstatessj)
+&emsp;&emsp;&deg;&nbsp;[分析gapminder数据](#fxgapmindersj)
 
 <span id='hsyx'></span>
 # [函数原型](#home)

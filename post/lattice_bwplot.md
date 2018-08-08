@@ -7,11 +7,11 @@ tags = {"标签":["R语言","lattice"]}
 
 <span id='home'></span>
 
--  [函数原型](#hsyx)
--  [参数说明](#cssm)
--  [绘图案例](#htal)
-  - [分析ToothGrowth数据](#fxtoothgrowthdata)
-  - [两因素分组](#lysfz)
+&bull;&nbsp;[函数原型](#hsyx)
+&bull;&nbsp;[参数说明](#cssm)
+&bull;&nbsp;[绘图案例](#htal)
+&emsp;&emsp;&deg;&nbsp;[分析ToothGrowth数据](#fxtoothgrowthdata)
+&emsp;&emsp;&deg;&nbsp;[两因素分组](#lysfz)
 
 
 
