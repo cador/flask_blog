@@ -220,16 +220,16 @@ def get_category_html(cate_key):
     return out
 
 
-def get_detail_tags_html():
+def get_detail_tags_html(article_id):
     out = ''
-    for cate_key in category_index:
+    for cate_key in articles[article_id]['cate']:
         out = out + '<li><i class="fa fa-category">'+cate_key+' > </i>'
-        for sub_key in category_index[cate_key]:
+        for sub_key in articles[article_id]['cate'][cate_key]:
             out = out + '<a href="/categories_list/'+cate_key+'/'+sub_key+'">'+sub_key+'</a>'
         out = out + '</li>'
-    for tag_key in tags_index:
+    for tag_key in articles[article_id]['tag']:
         out = out + '<li><i class="fa fa-tags">'+tag_key+' > </i>'
-        for sub_key in tags_index[tag_key]:
+        for sub_key in articles[article_id]['tag'][tag_key]:
             out = out + '<a href="/tags_list/'+tag_key+'/'+sub_key+'">'+sub_key+'</a>'
         out = out + '</li>'
     return out

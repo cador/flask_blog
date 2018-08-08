@@ -35,7 +35,7 @@ def article(article_id):
         entity = db_tool.articles[article_id]
         return flask.render_template("article.html", title=entity['title'],
                                      date=entity['date'], html=flask.Markup(entity['html']),
-                                     detail_tags=flask.Markup(db_tool.get_detail_tags_html()))
+                                     detail_tags=flask.Markup(db_tool.get_detail_tags_html(article_id)))
     else:
         return flask.render_template('404.html')
 
