@@ -11,20 +11,20 @@ dplyr是一套数据操作的语法，它提供了一致的动作集合可以帮
 本文试图对该dplyr包的一些基础且常用的功能做简要介绍。
 主要包括：
 <span id='home'></span>
-&nabla;[tbl对象](#tibble_obj)
-&nabla;[数据操作](#sjcz)
+&bull;&nbsp;[tbl对象](#tibble_obj)
+&bull;&nbsp;[数据操作](#sjcz)
 &emsp;&emsp;&loz;[变量筛选](#sjcz_blsx)
 &emsp;&emsp;&loz;[记录过滤](#sjcz_jlgl)
 &emsp;&emsp;&loz;[排序操作](#sjcz_bxcz)
 &emsp;&emsp;&loz;[关联操作](#sjcz_glcz)
 &emsp;&emsp;&loz;[衍生变量](#sjcz_ysbl)
 &emsp;&emsp;&loz;[重命名变量](#sjcz_cmmbl)
-&nabla;[聚合分析](#jhfx)
+&bull;&nbsp;[聚合分析](#jhfx)
 &emsp;&emsp;&loz;[汇总函数](#jhfx_hzhs)
 &emsp;&emsp;&loz;[分组函数](#jhfx_fzhs)
 &emsp;&emsp;&loz;[聚合函数](#jhfx_jhhs)
-&nabla;[抽样函数](#cyhs)
-&nabla;[管道操作](#gdcz)
+&bull;&nbsp;[抽样函数](#cyhs)
+&bull;&nbsp;[管道操作](#gdcz)
 <span id='tibble_obj'></span>
 
 # [tbl对象](#home)
