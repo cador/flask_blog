@@ -16,6 +16,8 @@ pre{
   background:#f6f6ae url(./school-book.png);
   border-top: solid 1px #505050;
   border-bottom: solid 1px #505050;
+  border-left: solid 1px #505050;
+  border-right: solid 1px #505050;
 }
 
 .hljs-keyword,
