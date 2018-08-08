@@ -1,7 +1,7 @@
 +++
 date = "2018-08-07"
 title = "dplyr包基础用法"
-categories = { "R Language Series":["dplyr"] }
+categories = { "R语言系列":["dplyr"] }
 tags = {"common":["R语言","数据处理"]}
 +++
 
