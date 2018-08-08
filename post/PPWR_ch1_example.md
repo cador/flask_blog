@@ -72,6 +72,7 @@ lapply(1:years,function(year){
  >近8月销量
  - RecentVal12	
  >近12月销量,去年同期
+
 # 
 数据转换的代码如下：
 ```R
