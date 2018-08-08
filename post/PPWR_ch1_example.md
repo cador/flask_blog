@@ -41,7 +41,8 @@ wineind
 ![image](/images/Ts010808)
 从图中明显可以看出，该时间序列数据呈明显地周期性变化。
 
-## [数据读入及处理](#sjdqjcl)
+<span id='sjdqjcl'></span>
+## [数据读入及处理](#home)
 加载forecast包，使用自带数据集wineind。使用ACF函数查看wineind数据的自相关性，代码如下:
 ```R
 acf(wineind,lag.max = 100)
@@ -63,7 +64,8 @@ lapply(1:years,function(year){
 ![image](/images/Ts010343x)
 由图可知，月份与销量线性关系明显，应该考虑进建模基础数据，用于预测。至此，需要将wineind的原始数据，处理成如下格式，输出建模基础数据集。
 
-## [基础数据集属性定义](#sjdy)
+<span id='sjdy'></span>
+## [基础数据集属性定义](#home)
  - ID	
  > 唯一标识,R语言自动生成
  - Month	
@@ -139,7 +141,9 @@ cook[cook>0.15]
 #去掉79和123行记录
 preData=preData[-c(123,79),]
 ```
-## [建立模型](#jlmx)
+
+<span id='jlmx'></span>
+## [建立模型](#home)
 根据上一步输出的基础数据，提取150行作为训练数据，剩下的数据作为测试数据。数据分割及建模的代码如下：
 ```R
 #分离训练集与测试集
@@ -300,7 +304,8 @@ summary(lm.fit)
 ```
 如上为本次拟合的结果，所有系数的P值都小于0.05，影响明显，且拟合优度为0.86，可用于预测。lm.fit就是我们建立的用于时间序列预测的线性回归模型。
 
-## 	[预测及误差分析](#ycjwcfx)
+<span id='ycjwcfx'></span>
+## 	[预测及误差分析](#home)
 
 用lm.fit作为预测模型，对预测数据源testData进行预测。代码如下：
 ```R
