@@ -31,26 +31,34 @@ wineind
 ```
 从数据中可知，这是典型的时间序列数据，一行表示一年，12列表示一年的12个月，按顺序整理的数据。将时间序列数据进行绘制，得到下图。
 ![image](/images/Ts010808)
+从图中明显可以看出，该时间序列数据呈明显地周期性变化。
 
-
-
-
-
-
-
-#读入数据
-library(forecast)
+# 数据读入及处理
+加载forecast包，使用自带数据集wineind。使用ACF函数查看wineind数据的自相关性，代码如下:
+```R
 acf(wineind,lag.max = 100)
+```
+得到自相关性分析图表，如下：
+![image](/images/Ts01acf0808)
+红点部分为自相关性比较明显的位置，可以初步使用近1、4、6、8、12期的数值建立指标，作为预测基础数据。另外，通过观察确定wineind的数据周期为一年，将1980年到1993年每年按月的曲线图在一张图中，进一步观察，相应代码为：
+```R
 #观察曲线簇
-len=1993-1980+1
-data0=wineind[1:12*len]
-range0=range(data0)+c(-100,100)
-plot(1:12,1:12,ylim=range0,col='white', xlab="月份", ylab="销量")
-for(i in 1:len)
-{
-  points(1:12,wineind[(12*(i-1)+1):(12*i)])
-  lines(1:12,wineind[(12*(i-1)+1):(12*i)], lty=2)
-}
+N <- length(wineind)
+years <- ceiling(N/12)
+index <- rep(1:years,rep(12,years))[1:N]
+plot(1:12,ylim=range(wineind)+c(-100,100),col='white', xlab="Month", ylab="Sales")
+lapply(1:years,function(year){
+    points(wineind[index == year])
+    lines(wineind[index == year],lty=2)
+})
+```
+![image](/images/Ts010343x)
+
+
+
+
+
+
 #对数据按指定格式进行转换
 Month=NULL
 DstValue=NULL
