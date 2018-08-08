@@ -9,22 +9,22 @@ dplyr包是Hadley Wickham的杰作, 专注接受dataframe对象, 大幅提高了
 dplyr是一套数据操作的语法，它提供了一致的动作集合可以帮助你解决常见的数据操作问题，比如变量衍生、选取变量、过滤记录、聚合分析、排序等等。
 
 本文试图对该dplyr包的一些基础且常用的功能做简要介绍。
-主要包括：<hr>
+主要包括：
 <span id='home'></span>
-&loz;[tbl对象](#tibble_obj)
-&loz;[数据操作](#sjcz)
-&emsp;&emsp;[变量筛选](#sjcz_blsx)
-&emsp;&emsp;[记录过滤](#sjcz_jlgl)
-&emsp;&emsp;[排序操作](#sjcz_bxcz)
-&emsp;&emsp;[关联操作](#sjcz_glcz)
-&emsp;&emsp;[衍生变量](#sjcz_ysbl)
-&emsp;&emsp;[重命名变量](#sjcz_cmmbl)
-&loz;[聚合分析](#jhfx)
-&emsp;&emsp;[汇总函数](#jhfx_hzhs)
-&emsp;&emsp;[分组函数](#jhfx_fzhs)
-&emsp;&emsp;[聚合函数](#jhfx_jhhs)
-&loz;[抽样函数](#cyhs)
-&loz;[管道操作](#gdcz)
+&oplus;[tbl对象](#tibble_obj)
+&oplus;[数据操作](#sjcz)
+&emsp;&emsp;&loz;[变量筛选](#sjcz_blsx)
+&emsp;&emsp;&loz;[记录过滤](#sjcz_jlgl)
+&emsp;&emsp;&loz;[排序操作](#sjcz_bxcz)
+&emsp;&emsp;&loz;[关联操作](#sjcz_glcz)
+&emsp;&emsp;&loz;[衍生变量](#sjcz_ysbl)
+&emsp;&emsp;&loz;[重命名变量](#sjcz_cmmbl)
+&oplus;[聚合分析](#jhfx)
+&emsp;&emsp;&loz;[汇总函数](#jhfx_hzhs)
+&emsp;&emsp;&loz;[分组函数](#jhfx_fzhs)
+&emsp;&emsp;&loz;[聚合函数](#jhfx_jhhs)
+&oplus;[抽样函数](#cyhs)
+&oplus;[管道操作](#gdcz)
 <span id='tibble_obj'></span>
 
 # [tbl对象](#home)
