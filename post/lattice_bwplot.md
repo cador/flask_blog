@@ -1,7 +1,7 @@
 +++
 date = "2018-08-01"
 title = "lattice绘图系列：bwplot"
-categories = { "R语言系列":["lattice"] }
+categories = { "R Language Series":["lattice"] }
 tags = {"common":["R语言","lattice"]}
 +++
 
