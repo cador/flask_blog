@@ -5,8 +5,8 @@ categories = { "数据":["常用数据集"] }
 tags = {"标签":["数据"]}
 +++
 
-&#9851;[预览链接](/data/iris)
-&#8681;[下载数据](/download/iris)
+&#9851;&nbsp;[预览链接](/data/iris)
+&#8681;&nbsp;[下载数据](/download/iris)
 
 ## 描述
 iris数据集是常用的分类实验数据集，由Fisher, 1936收集整理。
