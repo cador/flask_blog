@@ -11,6 +11,7 @@ app.config["SEND_FILE_MAX_AGE_DEFAULT"] = timedelta(seconds=1)
 def hook():
     print("entering....")
     print(str(flask.request.args))
+    return 'ok'
 
 
 @app.route("/data/<data_name>")
