@@ -1,7 +1,7 @@
 +++
 date = "2018-08-08"
 title = "R语言预测初步"
-categories = { "R语言预测实战":["Chapter1"] }
+categories = { "R语言预测实战":["chapter1"] }
 tags = {"common":["R语言","预测"]}
 +++
 
