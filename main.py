@@ -9,9 +9,8 @@ app.config["SEND_FILE_MAX_AGE_DEFAULT"] = timedelta(seconds=1)
 
 @app.route("/hook", methods=['POST'])
 def hook():
-    print("entering....")
-
-    print(str(flask.request.args))
+    # 调用本地脚本进行更新
+    os.system("git pull")
     return 'ok'
 
 
