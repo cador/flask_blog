@@ -199,7 +199,7 @@ def get_item_html(article_id, title, date):
 
 
 def get_tags_html(tags_key):
-    out = '<blockquote><h2 class="category-title" style="font-size:1.5rem">'+tags_key+'</h2></blockquote>'
+    out = '<blockquote style="-webkit-margin-start:0px"><h2 class="category-title" style="font-size:1.5rem">'+tags_key+'</h2></blockquote>'
     for sub_key in tags_index[tags_key]:
         sub_out = '<ul class="category-item"><li>' + \
                   '<a href="/tags_list/'+tags_key+'/'+sub_key+'" style="font-size:1.5rem">'+sub_key+'</a>' + \
