@@ -2,7 +2,7 @@
 date = "2018-08-01"
 title = "lattice绘图系列：barchart"
 categories = { "R语言系列":["lattice"] }
-tags = {"标签":["R语言","lattice"]}
+tags = {"通用":["R语言","lattice"]}
 +++
 
 <span id='home'></span>

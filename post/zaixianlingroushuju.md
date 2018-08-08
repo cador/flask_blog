@@ -2,7 +2,7 @@
 date = "2018-08-07"
 title = "在线零售数据(OnlineRetail)"
 categories = { "数据":["零售数据"] }
-tags = {"标签":["数据"]}
+tags = {"通用":["数据"]}
 +++
 
 &#9851;&nbsp;[预览链接](/data/OnlineRetail)
