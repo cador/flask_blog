@@ -9,7 +9,7 @@ dplyr包是Hadley Wickham的杰作, 专注接受dataframe对象, 大幅提高了
 dplyr是一套数据操作的语法，它提供了一致的动作集合可以帮助你解决常见的数据操作问题，比如变量衍生、选取变量、过滤记录、聚合分析、排序等等。
 
 本文试图对该dplyr包的一些基础且常用的功能做简要介绍。
-主要包括：
+主要内容如下：
 <span id='home'></span>
 &bull;&nbsp;[tbl对象](#tibble_obj)
 &bull;&nbsp;[数据操作](#sjcz)
