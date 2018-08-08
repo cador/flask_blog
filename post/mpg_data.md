@@ -1,8 +1,8 @@
 +++
 date = "2018-08-07"
 title = "汽车耗热率数据(mpg)"
-categories = { "数据":["常用数据集"] }
-tags = {"通用":["数据"]}
+categories = { "data":["常用数据集"] }
+tags = {"common":["data"]}
 +++
 
 &#9851;&nbsp;[预览链接](/data/mpg)

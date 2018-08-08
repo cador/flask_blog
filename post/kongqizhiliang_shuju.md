@@ -2,7 +2,7 @@
 date = "2018-08-07"
 title = "空气质量数据(airquality)"
 categories = { "数据":["常用数据集"] }
-tags = {"通用":["数据"]}
+tags = {"common":["data"]}
 +++
 
 &#9851;&nbsp;[预览链接](/data/airquality)

@@ -2,7 +2,7 @@
 date = "2018-08-07"
 title = "dplyr包基础用法"
 categories = { "R语言系列":["dplyr"] }
-tags = {"通用":["R语言","数据处理"]}
+tags = {"common":["R语言","数据处理"]}
 +++
 
 dplyr包是Hadley Wickham的杰作, 专注接受dataframe对象, 大幅提高了速度, 并且提供了稳健的与其它数据库对象间的接口。
