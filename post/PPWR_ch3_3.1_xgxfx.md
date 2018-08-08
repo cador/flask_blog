@@ -1,7 +1,7 @@
 +++
 date = "2018-08-09"
 title = "3.1相关分析"
-categories = { "R语言预测实战":["Chapter3"] }
+categories = { "R语言预测实战":["chapter3"] }
 tags = {"common":["R语言","相关性"]}
 +++
 
