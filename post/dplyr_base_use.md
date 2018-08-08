@@ -11,10 +11,8 @@ dplyr是一套数据操作的语法，它提供了一致的动作集合可以帮
 本文试图对该dplyr包的一些基础且常用的功能做简要介绍。
 主要包括：
 
-* Unordered item 1
-  * Unordered item 2
-* Unordered item 3
-  * Unordered item 4
+* [Unordered item 1](#tibble_obj)
+* Unordered item 2
 
         
 <span id='home'></span>
