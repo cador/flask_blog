@@ -7,6 +7,13 @@ app = flask.Flask(__name__)
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = timedelta(seconds=1)
 
 
+@app.route("/hook", methods=['POST'])
+def hook():
+    print("entering....")
+    print(str(flask.request.args))
+    print()
+
+
 @app.route("/data/<data_name>")
 def data(data_name):
     file_name = "data/"+data_name+".csv"
