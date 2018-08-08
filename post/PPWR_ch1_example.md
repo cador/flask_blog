@@ -33,7 +33,7 @@ wineind
 ![image](/images/Ts010808)
 从图中明显可以看出，该时间序列数据呈明显地周期性变化。
 
-# 数据读入及处理
+## 数据读入及处理
 加载forecast包，使用自带数据集wineind。使用ACF函数查看wineind数据的自相关性，代码如下:
 ```R
 acf(wineind,lag.max = 100)
@@ -73,11 +73,8 @@ lapply(1:years,function(year){
  - RecentVal12	
  >近12月销量,去年同期
 
-
-
-
-
-
+数据转换的代码如下：
+```R
 #对数据按指定格式进行转换
 Month=NULL
 DstValue=NULL
@@ -101,15 +98,83 @@ for(i in (12+1):(length(wineind)-1))
 }
 preData=data.frame(Month,DstValue,RecentVal1,RecentVal4,RecentVal6,RecentVal8,RecentVal12)
 head(preData)
+```
+```R
+##   Month DstValue RecentVal1 RecentVal4 RecentVal6 RecentVal8 RecentVal12
+## 1     2    18000      18000      22591      23739      19227       18000
+## 2     3    20008      18000      26786      21133      22893       20016
+## 3     4    21354      20008      29740      22591      23739       18000
+## 4     5    19498      21354      18000      26786      21133       18019
+## 5     6    22125      19498      18000      29740      22591       19227
+## 6     7    25817      22125      20008      18000      26786       22893
+```
+```R
 #画出散点矩阵图
 plot(preData)
+```
+![image](/images/Ts03209dfsa)
+注意到第二行最后一列的图中，有两个孤立点，在建模之前需要去掉这两个点，因为这样杠杆点很影响线性模型的建模效果。建立DstValue与RecentVal12的线性模型，通过cooks.distance函数计算每行记录对模拟的影响度量，代码如下：
+```R
 #使用DstValue与RecentVal12拟合线性模型
 lm.fit=lm(DstValue~RecentVal12,data=preData)
 cook<-cooks.distance(lm.fit)
 plot(cook)
 abline(h=0.15,lty=2,col='red')
+```
+![image](/images/Ts0342jkljfkldja)
+如图，存在两个明显的杠杆点，需要进行分离。代码如下：
+```R
 cook[cook>0.15]
+##        79       123 
+## 0.1706335 0.2433219
+#去掉79和123行记录
 preData=preData[-c(123,79),]
+```
+## 建立模型
+根据上一步输出的基础数据，提取150行作为训练数据，剩下的数据作为测试数据。数据分割及建模的代码如下：
+```R
+#分离训练集与测试集
+trainData=preData[1:150,]
+testData=preData[151:163,]
+
+#建立模型
+lm.fit<-lm(DstValue~Month+RecentVal1+RecentVal4+RecentVal6+RecentVal8+RecentVal12,data=trainData)
+summary(lm.fit)
+```
+```R
+# Call:
+# lm(formula = DstValue ~ Month + RecentVal1 + RecentVal4 + RecentVal6 + 
+#    RecentVal8 + RecentVal12, data = trainData)
+#
+# Residuals:
+#     Min      1Q  Median      3Q     Max 
+# -4806.5 -1549.1  -171.8  1368.7  6763.3 
+#
+#Coefficients:
+#              Estimate Std. Error t value Pr(>|t|)    
+#(Intercept)  2.214e+03  1.987e+03   1.114  0.26714    
+#Month        3.855e+02  8.955e+01   4.305 3.08e-05 ***
+#RecentVal1  -2.964e-03  3.354e-02  -0.088  0.92971    
+#RecentVal4   7.227e-02  3.567e-02   2.026  0.04463 *  
+#RecentVal6  -1.825e-02  3.759e-02  -0.486  0.62804    
+#RecentVal8   1.123e-01  3.903e-02   2.876  0.00464 ** 
+#RecentVal12  6.701e-01  5.921e-02  11.316  < 2e-16 ***
+#---
+#Signif. codes:  
+#0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+#
+#Residual standard error: 1989 on 143 degrees of freedom
+#Multiple R-squared:  0.848,	Adjusted R-squared:  0.8416 
+#F-statistic:   133 on 6 and 143 DF,  p-value: < 2.2e-16
+```
+
+
+
+
+
+
+
+
 
 #分离训练集与测试集
 trainData=preData[1:150,]
