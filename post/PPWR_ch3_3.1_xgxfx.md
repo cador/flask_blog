@@ -5,6 +5,16 @@ categories = { "R语言预测实战":["chapter3"] }
 tags = {"common":["R语言","相关性"]}
 +++
 
+<span id='home'></span>
+&#9702;&nbsp;[自相关分析](#zxj)
+&#9702;&nbsp;[偏相关分析](#pxj)
+&#9702;&nbsp;[简单相关分析](#cor)
+&#9702;&nbsp;[互相关分析](#hxj)
+&#9702;&nbsp;[典型相关分析](#cancor)
+
+<span id='zxj'></span>
+## [自相关分析](#home)
+
 对airmiles数据进行自相关分析的代码如下：
 ```R
 acf(airmiles,type='correlation',lag.max=10)
@@ -12,12 +22,18 @@ acf(airmiles,type='correlation',lag.max=10)
 ![image](/images/2018-08-09-06-49)
 如图可知，滞后阶数为0，相关系数为1，随着滞后阶数的增加，相关系数逐渐减弱，并趋于稳定。
 
+<span id='pxj'></span>
+## [偏相关分析](#home)
+
 对airmiles数据进行偏相关分析的代码如下：
 ```R
 pacf(airmiles,lag.max=10)
 ```
 ![image](/images/2018-08-09-06-51)
 如图可知，最小为1阶滞后，对应值为0.876，与对应的1阶自相关系数相等，随之着滞后阶数的增加（大于2阶），偏相关系数一直较小并且稳定。
+
+<span id='cor'></span>
+## [简单相关分析](#home)
 
 散点矩阵是由变量两两组合由数据点分布图构成的矩阵，此处使用graphics包中的pairs函数绘制散点图矩阵，代码如下：
 ```R
@@ -114,11 +130,17 @@ pvrect(cluster.bootstrap)
 ![image](/images/2018-08-09-07-21)
 如图，au值即Approximately Unbiased的简写，它是通过多尺度自助重抽样法计算而来的；而bp值，即Bootstrap Probability的简写，它是通过普通自助重抽样法计算而来。函数pvrect标明了影响显著的聚类，显著的类越多，效果越好。
 
+<span id='hxj'></span>
+## [互相关分析](#home)
+
 对airmiles和LakeHuron时序数据进行互相关分析的代码如下：
 ```R
 ccf(airmiles,ts(LakeHuron,start=1937,end=1960),type="correlation")
 ```
 ![image](/images/2018-08-09-07-25)
+
+<span id='cancor'></span>
+## [典型相关分析](#home)
 
 现以iris数据集为例，使用R语言说明特征值及特征向量的计算过程，代码如下：
 ```R
