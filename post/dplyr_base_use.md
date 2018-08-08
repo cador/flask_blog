@@ -12,14 +12,15 @@ dplyr是一套数据操作的语法，它提供了一致的动作集合可以帮
 主要包括：
 
 <span id='home'></span>
- +  [tbl对象](#tibble_obj)
- +  [数据操作](#sjcz)
-    + [变量筛选](#sjcz_blsx)
-    + [记录过滤](#sjcz_jlgl)
-    + [排序操作](#sjcz_bxcz)
-    + [关联操作](#sjcz_glcz)
-    + [衍生变量](#sjcz_ysbl)
-    + [重命名变量](#sjcz_cmmbl)
+[tbl对象](#tibble_obj)<br>
+[数据操作](#sjcz)<br>
+&emsp;&emsp;[变量筛选](#sjcz_blsx)<br>
+&emsp;&emsp;[记录过滤](#sjcz_jlgl)<br>
+&emsp;&emsp;[排序操作](#sjcz_bxcz)<br>
+&emsp;&emsp;[关联操作](#sjcz_glcz)<br>
+&emsp;&emsp;[衍生变量](#sjcz_ysbl)<br>
+&emsp;&emsp;[重命名变量](#sjcz_cmmbl)<br>
+
  +  [聚合分析](#jhfx)
     + [汇总函数](#jhfx_hzhs)
     + [分组函数](#jhfx_fzhs)
