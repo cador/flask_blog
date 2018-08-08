@@ -10,10 +10,10 @@ tags = {"标签":["R语言","lattice"]}
 &bull;&nbsp;[函数原型](#hsyx)
 &bull;&nbsp;[参数说明](#cssm)
 &bull;&nbsp;[绘图案例](#htal)
-&emsp;&emsp;&middot;&nbsp;[分析iris数据](#fxirissj)
-&emsp;&emsp;&middot;&nbsp;[分析mtcars数据](#fxmtcarssj)
-&emsp;&emsp;&middot;&nbsp;[分析states数据](#fxstatessj)
-&emsp;&emsp;&middot;&nbsp;[分析gapminder数据](#fxgapmindersj)
+&emsp;&emsp;&ordm;&nbsp;[分析iris数据](#fxirissj)
+&emsp;&emsp;&ordm;&nbsp;[分析mtcars数据](#fxmtcarssj)
+&emsp;&emsp;&ordm;&nbsp;[分析states数据](#fxstatessj)
+&emsp;&emsp;&ordm;&nbsp;[分析gapminder数据](#fxgapmindersj)
 
 <span id='hsyx'></span>
 # [函数原型](#home)
