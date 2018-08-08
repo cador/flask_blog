@@ -69,7 +69,7 @@ def hello():
     content = list()
     for item in db_tool.home_index:
         content.append(db_tool.get_item_html(item['article_id'], item['title'], item['date']))
-    return paging_html(content, 'Newest Update', '')
+    return paging_html(content, 'Recent Update', '')
 
 
 @app.route("/about")
