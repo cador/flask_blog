@@ -53,6 +53,25 @@ lapply(1:years,function(year){
 })
 ```
 ![image](/images/Ts010343x)
+由图可知，月份与销量线性关系明显，应该考虑进建模基础数据，用于预测。至此，需要将wineind的原始数据，处理成如下格式，输出建模基础数据集。
+
+## 基础数据集属性定义
+ - ID	
+ > 唯一标识,R语言自动生成
+ - Month	
+ > 预测月月份
+ - DstValue	
+ > 预测月销量
+ - RecentVal1	
+ > 近1月销量
+ - RecentVal4	
+ > 近4月销量
+ - RecentVal6	
+ >近6月销量
+ - RecentVal8	
+ >近8月销量
+ - RecentVal12	
+ >近12月销量,去年同期
 
 
 
