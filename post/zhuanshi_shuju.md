@@ -5,8 +5,8 @@ categories = { "数据":["常用数据集"] }
 tags = {"标签":["数据"]}
 +++
 
-[预览链接](/data/diamonds)
-[下载数据](/download/diamonds)
+&#9851;&nbsp;[预览链接](/data/diamonds)
+&#8681;&nbsp;[下载数据](/download/diamonds)
 
 ## 描述
 该数据集包含将近54000颗钻石的价钱及其它属性

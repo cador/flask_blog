@@ -5,8 +5,8 @@ categories = { "数据":["零售数据"] }
 tags = {"标签":["数据"]}
 +++
 
-[预览链接](/data/OnlineRetail)
-[下载数据](/download/OnlineRetail)
+&#9851;&nbsp;[预览链接](/data/OnlineRetail)
+&#8681;&nbsp;[下载数据](/download/OnlineRetail)
 
 ## 描述
 OnlineRetail数据集，包含4000多条用户购买商品的交易信息

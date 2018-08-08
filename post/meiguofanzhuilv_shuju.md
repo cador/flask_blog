@@ -5,8 +5,8 @@ categories = { "数据":["常用数据集"] }
 tags = {"标签":["数据"]}
 +++
 
-[预览链接](/data/USArrests)
-[下载数据](/download/USArrests)
+&#9851;&nbsp;[预览链接](/data/USArrests)
+&#8681;&nbsp;[下载数据](/download/USArrests)
 
 ## 描述
 该数据集包含1973年美国50个州的犯罪数据，按逮捕的每100000居民统计的值。

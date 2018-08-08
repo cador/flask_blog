@@ -5,8 +5,8 @@ categories = { "数据":["常用数据集"] }
 tags = {"标签":["数据"]}
 +++
 
-[预览链接](/data/airquality)
-[下载数据](/download/airquality)
+&#9851;&nbsp;[预览链接](/data/airquality)
+&#8681;&nbsp;[下载数据](/download/airquality)
 
 ## 描述
 纽约1973年5-9月每日空气质量

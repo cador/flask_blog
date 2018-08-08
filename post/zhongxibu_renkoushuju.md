@@ -5,8 +5,8 @@ categories = { "数据":["常用数据集"] }
 tags = {"标签":["数据"]}
 +++
 
-[预览链接](/data/midwest)
-[下载数据](/download/midwest)
+&#9851;&nbsp;[预览链接](/data/midwest)
+&#8681;&nbsp;[下载数据](/download/midwest)
 
 ## 描述
 中西部郡县的人口统计信息

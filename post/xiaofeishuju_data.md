@@ -5,8 +5,8 @@ categories = { "数据":["常用数据集"] }
 tags = {"标签":["数据"]}
 +++
 
-[预览链接](/data/tips)
-[下载数据](/download/tips)
+&#9851;&nbsp;[预览链接](/data/tips)
+&#8681;&nbsp;[下载数据](/download/tips)
 
 ## 描述
 该数据是一位餐厅服务员在几个月内记录的收到的小费数据

@@ -5,8 +5,8 @@ categories = { "数据":["常用数据集"] }
 tags = {"标签":["数据"]}
 +++
 
-[预览链接](/data/orstationc)
-[下载数据](/download/orstationc)
+&#9851;&nbsp;[预览链接](/data/orstationc)
+&#8681;&nbsp;[下载数据](/download/orstationc)
 
 ## 结构
 
