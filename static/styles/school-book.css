@@ -27,7 +27,7 @@ pre{
 
 .hljs,
 .hljs-subst {
-  color: #3e5915;
+  color: #202020;
 }
 
 .hljs-string,
@@ -51,7 +51,7 @@ pre{
 .hljs-quote,
 .hljs-deletion,
 .hljs-meta {
-  color: #e60415;
+  color: #787878;
 }
 
 .hljs-keyword,
