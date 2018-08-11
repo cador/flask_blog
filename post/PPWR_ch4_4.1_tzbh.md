@@ -126,7 +126,7 @@ stdProc<-function(x,isPos)
 
 # 离散化
 
-## 分箱法
+### 分箱法
 
 ```R
 #按均匀分布生成100个介于10到100之间的实数
@@ -169,7 +169,7 @@ for(lvl in L0)
     v2_min[subcond]=min(subval)
 }
 ```
-## 熵离散法
+### 熵离散法
 
 ```R
 #将iris中的Sepal.Length变量排序，并保存在变量sortedSL中
