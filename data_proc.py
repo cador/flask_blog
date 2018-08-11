@@ -169,6 +169,7 @@ def add_cate_tag(out_dict, article_id):
 
 def add_one_file(file):
     out_dict, html = trim_md(file)
+    print(out_dict)
     if len(out_dict) > 0:
         article_id = file.split('/')[-1].strip('.md')
         articles[article_id] = {'title': out_dict['title'],
