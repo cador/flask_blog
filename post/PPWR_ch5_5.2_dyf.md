@@ -87,13 +87,11 @@ OneWayAnova<-function(xdata,factorNo,NumNo)
         res<-NULL
         if(tmp$p.value<0.01)
         {
-            pnormTest<-c(pnormTest,paste("水平 - ",Lvls[i]," , 正态检测的P值 : "
-                         ,tmp$p.value, "显著性差异，不服从正态分布。",sep=""))
+            pnormTest<-c(pnormTest,paste("水平 - ",Lvls[i]," , 正态检测的P值 : ", tmp$p.value, "显著性差异，不服从正态分布。",sep=""))
         }
         else
         {
-            pnormTest<-c(pnormTest,paste("水平 - ",Lvls[i]," , 正态检测的P值 : "
-                         ,tmp$p.value,"差异不显著，服从正态分布。",sep=""))
+            pnormTest<-c(pnormTest,paste("水平 - ",Lvls[i]," , 正态检测的P值 : ", tmp$p.value,"差异不显著，服从正态分布。",sep=""))
         }
     }
 
