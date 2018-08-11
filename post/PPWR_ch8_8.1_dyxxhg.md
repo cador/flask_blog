@@ -8,6 +8,7 @@ tags = {"common":["R语言","线性回归"]}
 [mm数据集下载](/download/mm)
 
 使用vif函数计算线性模型y~x1+x2的方差膨胀因子，代码如下：
+
 ```R
 # 从文件中加载M数据集
 data = read.csv("f:\\mm.csv")
