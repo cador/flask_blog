@@ -8,7 +8,6 @@ tags = {"common":["R语言","线性回归"]}
 [mm数据集下载](/download/mm)
 
 使用vif函数计算线性模型y~x1+x2的方差膨胀因子，代码如下：
-![image](http://chart.googleapis.com/chart?cht=tx&chl=\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a})
 
 ```R
 # 从文件中加载M数据集
