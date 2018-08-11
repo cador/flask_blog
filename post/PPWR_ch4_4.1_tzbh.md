@@ -5,6 +5,7 @@ categories = { "R语言预测实战":["chapter4"] }
 tags = {"common":["R语言",特征变换"]}
 +++
 
+
 [boys Data 数据下载](/article/boys_data)
 
 # 概念分层
