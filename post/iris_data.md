@@ -24,16 +24,3 @@ iris也称鸢尾花卉数据集，是一类多重变量分析的数据集。数�
  >花瓣宽度
  - Species
  >鸢尾花品种,iris中的花被分为了三类：Setosa , Virginica , 和Versicolor
-
-
-```javascript
-    /**
-     * SyntaxHighlighter
-     */
-    function foo()
-    {
-        if (counter <= 10)
-            return;
-        // it works!
-    }
-```
