@@ -5,12 +5,13 @@ import os
 import glob
 import math
 import threading
+import collections
 
 
 articles = dict()
 home_index = list()
-category_index = dict()
-tags_index = dict()
+category_index = collections.OrderedDict()
+tags_index = collections.OrderedDict()
 extensions = ['markdown.extensions.extra',
               'markdown.extensions.abbr',
               'markdown.extensions.attr_list',
