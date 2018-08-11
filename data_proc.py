@@ -62,7 +62,7 @@ def trim_md(md_file):
                     check_dict[kv[0].strip(' ')] = json.loads(kv[1].strip(' ').strip('\n'))
             if log:
                 if len(row_content) > 0:
-                    content.append(row_content)
+                    content.append(row)
             if not start and row_content == "+++":
                 start = True
             elif start and row_content == "+++":
@@ -75,7 +75,6 @@ def trim_md(md_file):
             content = ''
     except Exception as e:
         print(str(e))
-    print(content.encode('utf-8'))
     return check_dict, content
 
 
