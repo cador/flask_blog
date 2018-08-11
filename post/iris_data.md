@@ -27,16 +27,11 @@ iris也称鸢尾花卉数据集，是一类多重变量分析的数据集。数�
 
 #
 
-<pre class="brush: php;">
-  /**
-  *
-  *@author dequan
-  */
-  Class Person{
+```PHP
+Class Person{
     public function say(){
         echo 'hello world';
     }
   }
-
-</pre>
+```
 
