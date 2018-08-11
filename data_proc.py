@@ -75,7 +75,7 @@ def trim_md(md_file):
             content = ''
     except Exception as e:
         print(str(e))
-    print(content)
+    print(content.encode('utf-8'))
     return check_dict, content
 
 
