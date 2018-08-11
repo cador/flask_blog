@@ -73,5 +73,3 @@ head(boysData)
 barplot(table(boysData$wtype),col=rainbow(9),border='gray')
 ```
 ![image](/images/2018-08-11-10-31)
-
-
