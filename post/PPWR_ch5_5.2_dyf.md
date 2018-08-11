@@ -1,7 +1,7 @@
 +++
 date = "2018-08-11"
 title = "5.2单元法"
-categories = { "R语言预测实战":["chapter5"] }
+categories = { "R语言预测实战":["ch05"] }
 tags = {"common":["R语言","特征选择"]}
 +++
 

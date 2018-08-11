@@ -1,7 +1,7 @@
 +++
 date = "2018-08-11"
 title = "4.1特征变换"
-categories = { "R语言预测实战":["chapter4"] }
+categories = { "R语言预测实战":["ch04"] }
 tags = {"common":["R语言","特征变换"]}
 +++
 
