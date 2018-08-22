@@ -268,7 +268,6 @@ blockquote {
     text-decoration: none;
     font-size: 17px;
     font-family: 'Lato', sans-serif;
-    font-weight: bold;
     color: #222;
     border-bottom: 1px solid #ddd;
     transition: border-color 300ms;
@@ -291,7 +290,6 @@ blockquote {
     text-decoration: none;
     font-size: 19px;
     font-family: 'Lato', sans-serif;
-    font-weight: bold;
     color: #222;
     transition: color 300ms;
 }
@@ -301,7 +299,6 @@ blockquote {
     margin-right: 15px;
     color: #ccc;
     font-size: 14px;
-    font-weight: bold;
 }
 
 .tag-cloud-item {
@@ -318,7 +315,6 @@ blockquote {
 .tag-cloud-item a {
     text-decoration: none;
     font-family: 'Lato', sans-serif;
-    font-weight: bold;
     color: #222;
     transition: color 300ms;
 }
