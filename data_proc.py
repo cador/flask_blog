@@ -192,7 +192,7 @@ def init_db():
 
 def get_item_html(article_id, title, date):
     out = '<nav class="list-item">' + \
-      '<a href="/article/'+article_id+'">'+title+'</a>' + \
+      '<a href="/article/'+article_id+'" style="font-size:1.2rem">'+title+'</a>' + \
       '<span class="list-item-date">'+date + \
       '</span>' + \
       '</nav>'
