@@ -32,7 +32,7 @@ dplyr是一套数据操作的语法，它提供了一致的动作集合可以帮
 tibble包提供了一个tbl_df类，它比传统的data.frame具有更严格的检查和更好的格式。as_tibble是一个新的S3更加通用也更加高效的函数，非常适合处理matirx和data.frame对象。它可以将普通的matrix或data.frame的对象转换成tbl_df类的对象。dplyr包中的函数都是基于tbl_df对象实现的。
 
 
-- 将data.frame转换成tbl_df
+将data.frame转换成tbl_df
 
 
  ```R
