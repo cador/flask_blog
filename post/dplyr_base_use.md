@@ -38,9 +38,10 @@ tibble包提供了一个tbl_df类，它比传统的data.frame具有更严格的�
  ```R
 library(dplyr)
 tbl_df(mtcars)
+
  ```
  ```R
-## A tibble: 32 x 11
+##A tibble: 32 x 11
 #     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
 #  * <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
 #  1  21.0  6.00   160 110    3.90  2.62  16.5  0     1.00  4.00  4.00
@@ -53,7 +54,7 @@ tbl_df(mtcars)
 #  8  24.4  4.00   147  62.0  3.69  3.19  20.0  1.00  0     4.00  2.00
 #  9  22.8  4.00   141  95.0  3.92  3.15  22.9  1.00  0     4.00  2.00
 # 10  19.2  6.00   168 123    3.92  3.44  18.3  1.00  0     4.00  4.00
-## ... with 22 more rows
+##... with 22 more rows
  ```
 也可以使用as_tibble函数，如下：
 ```R
