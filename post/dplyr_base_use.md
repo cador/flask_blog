@@ -33,6 +33,7 @@ tibble包提供了一个tbl_df类，它比传统的data.frame具有更严格的�
 
 
  - 将data.frame转换成tbl_df
+ #
  
  ```R
 library(dplyr)
